@@ -1,16 +1,17 @@
 ﻿using System.Text;
 using System.Text.RegularExpressions;
+using Cysharp.Text;
 
 namespace Pregex;
 
 public class RegexBuilder
 {
-    private StringBuilder _pattern;
+    private Utf16ValueStringBuilder _pattern;
     private RegexOptions _options;
 
     private RegexBuilder()
     {
-        _pattern = new StringBuilder();
+        _pattern = ZString.CreateStringBuilder();
         _options = RegexOptions.None;
     }
     

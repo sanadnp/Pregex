@@ -11,6 +11,8 @@
         <RepositoryUrl>https://github.com/gregyjames/pregex</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageTags>regex, builder, string, matching, pretty, readible, refactor, maintainable</PackageTags>
+        <Copyright>Greg James @ 2025</Copyright>
+        <PackageIcon>Pictogrammers-Material-Regex.512.png</PackageIcon>
     </PropertyGroup>
 
     <ItemGroup>
@@ -20,6 +22,14 @@
         <Content Include="../../README.md" Pack="true" PackagePath="\">
             <Link>README.md</Link>
         </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="..\..\Pictogrammers-Material-Regex.512.png">
+        <Pack>True</Pack>
+        <PackagePath></PackagePath>
+        <Link>Pictogrammers-Material-Regex.512.png</Link>
+      </None>
     </ItemGroup>
 
 </Project>

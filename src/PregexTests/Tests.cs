@@ -219,6 +219,32 @@ public class Tests
         Assert.IsTrue(regex.IsMatch("test.com"));
         Assert.IsFalse(regex.IsMatch("testacom"));
     }
+    
+    [Test]
+    public void TestNotWordMatching()
+    {
+        var regex = RegexBuilder.Create().NotWord().Build();
+        Assert.IsTrue(regex.IsMatch("!"));
+        Assert.IsTrue(regex.IsMatch("@"));
+        Assert.IsTrue(regex.IsMatch(" "));
+        Assert.IsFalse(regex.IsMatch("a"));
+        Assert.IsFalse(regex.IsMatch("Z"));
+        Assert.IsFalse(regex.IsMatch("5"));
+        Assert.IsFalse(regex.IsMatch("_"));
+    }
+
+    [Test]
+    public void TestNotWhitespaceMatching()
+    {
+        var regex = RegexBuilder.Create().NotWhitespace().Build();
+        Assert.IsTrue(regex.IsMatch("a"));
+        Assert.IsTrue(regex.IsMatch("5"));
+        Assert.IsTrue(regex.IsMatch("!"));
+        Assert.IsFalse(regex.IsMatch(" "));
+        Assert.IsFalse(regex.IsMatch("\t"));
+        Assert.IsFalse(regex.IsMatch("\n"));
+    }
+    
     #endregion
 
     #region Character Set Tests

@@ -13,4 +13,13 @@
         <PackageTags>regex, builder, string, matching, pretty, readible, refactor, maintainable</PackageTags>
     </PropertyGroup>
 
+    <ItemGroup>
+        <Content Include="../../LICENSE.md" Pack="true" PackagePath="\">
+            <Link>LICENSE</Link>
+        </Content>
+        <Content Include="../../README.md" Pack="true" PackagePath="\">
+            <Link>README.md</Link>
+        </Content>
+    </ItemGroup>
+
 </Project>

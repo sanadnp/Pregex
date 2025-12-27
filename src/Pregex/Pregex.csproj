@@ -4,6 +4,13 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Authors>Greg James</Authors>
+        <Title>Pregex</Title>
+        <Description>Pretty RegEx! A fluent, chainable API for building regular expressions in C# that's easy to read, write, and maintain.</Description>
+        <RepositoryUrl>https://github.com/gregyjames/pregex</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>regex, builder, string, matching, pretty, readible, refactor, maintainable</PackageTags>
     </PropertyGroup>
 
 </Project>

